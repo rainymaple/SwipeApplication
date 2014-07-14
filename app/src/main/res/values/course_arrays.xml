@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Course Titles -->
+    <string-array name="course_titles">
+        <item>@string/title_angular_get_started</item>
+        <item>@string/title_c_sharp_fundamentals</item>
+        <item>@string/title_modern_structured_logging</item>
+        <item>@string/title_node_application_patterns</item>
+        <item>@string/title_mvc5_fundamentals</item>
+    </string-array>
+
+    <!-- Course Short Titles -->
+    <string-array name="course_short_titles">
+        <item>@string/title_angular_get_started_short</item>
+        <item>@string/title_c_sharp_fundamentals_short</item>
+        <item>@string/title_modern_structured_logging_short</item>
+        <item>@string/title_node_application_patterns_short</item>
+        <item>@string/title_mvc5_fundamentals_short</item>
+    </string-array>
+
+    <!-- Course Descriptions  -->
+    <string-array name="course_description">
+        <item>@string/desc_angular_get_started</item>
+        <item>@string/desc_c_sharp_fundamentals</item>
+        <item>@string/desc_modern_structured_logging</item>
+        <item>@string/desc_node_application_patterns</item>
+        <item>@string/desc_mvc5_fundamentals</item>
+    </string-array>
+
+</resources>

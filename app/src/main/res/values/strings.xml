@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SwipeApplication</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="title_angular_get_started">AngularJS: Get Started</string>
+    <string name="title_c_sharp_fundamentals">C# Fundamentals with C# 5.0</string>
+    <string name="title_modern_structured_logging">Modern Structured Logging With Serilog and Seq</string>
+    <string name="title_node_application_patterns">Node Application Patterns</string>
+    <string name="title_mvc5_fundamentals">ASP.NET MVC 5 Fundamentals</string>
+
+    <string name="title_angular_get_started_short">AngularJS</string>
+    <string name="title_c_sharp_fundamentals_short">C#</string>
+    <string name="title_modern_structured_logging_short">Logging</string>
+    <string name="title_node_application_patterns_short">Node.js</string>
+    <string name="title_mvc5_fundamentals_short">MVC 5 </string>
+
+    <string name="desc_angular_get_started">This course demonstrates how to use the essential abstractions of AngularJS, including modules, controllers, directives, and services.</string>
+    <string name="desc_c_sharp_fundamentals">C# Fundamentals with C# 5.0 is designed to give you everything you need to become a productive C# developer on the .NET platform.</string>
+    <string name="desc_modern_structured_logging">Make your logs work for you and go beyond unstructured textual logs to create modern log information with rich, structured, queryable log data.</string>
+    <string name="desc_node_application_patterns">Design and development patterns for building applications in Node.js.</string>
+    <string name="desc_mvc5_fundamentals">ASP.NET MVC 5 Fundamentals covers all the new features of ASP.NET MVC 5, as well as the new features for web developers in Visual Studio 2013, including WebApi 2, OWIN, Katana, SignalR, and the Entity Framework version 6.</string>
+    <string name="top_card">picture</string>
+
+</resources>
