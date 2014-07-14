@@ -44,13 +44,12 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /** Create the adapter that will return a fragment for each of
+         the primary sections of the activity.    */
 
-
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getFragmentManager(),this);
 
-        // Set up the ViewPager with the sections adapter.
+        /** Set up the ViewPager with the sections adapter.*/
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
@@ -82,12 +81,15 @@ public class MainActivity extends Activity {
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
      */
-    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+
+     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         String mCourseTitles[], mCourseDescriptions[],mCourseShortTitles[];
+        public static final String ARG_SECTION_NUMBER = "section_number";
+        public static final String COURSE_TITLE = "course_title";
+        public static final String COURSE_DESCRIPTION = "course_description";
 
         public SectionsPagerAdapter(FragmentManager fm, Context context) {
-
             super(fm);
             Resources resources = context.getResources();
             mCourseTitles = resources.getStringArray(R.array.course_titles);
@@ -96,24 +98,27 @@ public class MainActivity extends Activity {
         }
 
 
-
         @Override
         public Fragment getItem(int position) {
-            // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
-
-            return PlaceholderFragment.newInstance(position,mCourseTitles,mCourseDescriptions);
+            /** getItem is called to instantiate the fragment for the given page. */
+            PlaceholderFragment fragment = new PlaceholderFragment();
+            Bundle args = new Bundle();
+            args.putInt(ARG_SECTION_NUMBER, position);
+            args.putString(COURSE_TITLE, mCourseTitles[position]);
+            args.putString(COURSE_DESCRIPTION,mCourseDescriptions[position]);
+            fragment.setArguments(args);
+            return fragment;
         }
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
+            /** determine how many pages will be shown */
             return mCourseTitles.length;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
-            return mCourseShortTitles[position];
+            return mCourseShortTitles[position];    /** show the tile in the PagerTitleStrip*/
         }
     }
 
@@ -121,64 +126,28 @@ public class MainActivity extends Activity {
      * A placeholder fragment containing a simple view.
      */
     public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-        public static final String COURSE_TITLE = "course_title";
-        public static final String COURSE_DESCRIPTION = "course_description";
-        public static final String TOP_CARD = "top_card";
-
-
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        public static PlaceholderFragment newInstance(int sectionNumber,
-                                                      String[] mCourseTitles,
-                                                      String[] mCourseDescriptions) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            args.putString(COURSE_TITLE, mCourseTitles[sectionNumber]);
-            args.putString(COURSE_DESCRIPTION,mCourseDescriptions[sectionNumber]);
-            args.putInt(TOP_CARD, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        public PlaceholderFragment() {
-        }
+        public PlaceholderFragment() {}
 
         @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
             Bundle args = getArguments();
             if (args != null) {
-                String courseTitle = args.getString(COURSE_TITLE);
-                String courseDescription = args.getString(COURSE_DESCRIPTION);
-                int sectionNumber = args.getInt(ARG_SECTION_NUMBER);
+                String courseTitle = args.getString(SectionsPagerAdapter.COURSE_TITLE);
+                String courseDescription = args.getString(SectionsPagerAdapter.COURSE_DESCRIPTION);
+                int sectionNumber = args.getInt(SectionsPagerAdapter.ARG_SECTION_NUMBER);
                 int topCardId = 0;
 
                 switch (sectionNumber) {
-                    case 0:
-                        topCardId = R.drawable.angularjs; break;
-                    case 1:
-                        topCardId = R.drawable.csharp; break;
-                    case 2:
-                        topCardId = R.drawable.logging; break;
-                    case 3:
-                        topCardId = R.drawable.nodejs; break;
-                    case 4:
-                        topCardId = R.drawable.mvc; break;
+                    case 0:  topCardId = R.drawable.angularjs; break;
+                    case 1:  topCardId = R.drawable.csharp; break;
+                    case 2:  topCardId = R.drawable.logging; break;
+                    case 3:  topCardId = R.drawable.nodejs; break;
+                    case 4:  topCardId = R.drawable.mvc; break;
                 }
                 displayValues(rootView, courseTitle, courseDescription, topCardId);
             }
-
 
             return rootView;
         }
