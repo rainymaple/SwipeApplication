@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
      * may be best to switch to a
      * {@link android.support.v13.app.FragmentStatePagerAdapter}.
      */
-    SectionsPagerAdapter mSectionsPagerAdapter;
+    CoursePagerAdapter mSectionsPagerAdapter;
 
     /**
      * The {@link ViewPager} that will host the section contents.
@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
         /** Create the adapter that will return a fragment for each of
          the primary sections of the activity.    */
 
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getFragmentManager(),this);
+        mSectionsPagerAdapter = new CoursePagerAdapter(getFragmentManager(),this);
 
         /** Set up the ViewPager with the sections adapter.*/
         mViewPager = (ViewPager) findViewById(R.id.pager);
@@ -80,7 +80,7 @@ public class MainActivity extends Activity {
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
-     */
+
 
      public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
@@ -100,7 +100,7 @@ public class MainActivity extends Activity {
 
         @Override
         public Fragment getItem(int position) {
-            /** getItem is called to instantiate the fragment for the given page. */
+            // getItem is called to instantiate the fragment for the given page.
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, position);
@@ -112,19 +112,19 @@ public class MainActivity extends Activity {
 
         @Override
         public int getCount() {
-            /** determine how many pages will be shown */
+            //determine how many pages will be shown
             return mCourseTitles.length;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
-            return mCourseShortTitles[position];    /** show the tile in the PagerTitleStrip*/
+            return mCourseShortTitles[position];    // show the tile in the PagerTitleStrip
         }
-    }
+    }    */
 
     /**
      * A placeholder fragment containing a simple view.
-     */
+
     public static class PlaceholderFragment extends Fragment {
         public PlaceholderFragment() {}
 
@@ -161,6 +161,6 @@ public class MainActivity extends Activity {
             courseDescriptionTextView.setText(courseDescription);
             topCardImageView.setImageResource(topCardId);
         }
-    }
+    }*/
 
 }
