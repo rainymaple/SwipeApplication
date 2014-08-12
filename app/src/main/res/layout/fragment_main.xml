@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
+        android:text="Course Title"
         android:id="@+id/courseTitle"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/topCard"
@@ -35,7 +35,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
+        android:text="This is the course description"
         android:id="@+id/courseDescription"
         android:layout_below="@+id/courseTitle"
         android:layout_marginTop="10dp"

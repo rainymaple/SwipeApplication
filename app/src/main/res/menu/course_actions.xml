@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.jgli.swipeapplication.CourseActionsActivity" >
+    <item android:id="@+id/showThirdLayer"
+        android:title="3rd Layer"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+</menu>
