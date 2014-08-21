@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,15 +33,15 @@ public class CourseFragment extends Fragment {
         if (args != null) {
             mCourseTitle = args.getString(CoursePagerAdapter.COURSE_TITLE);
             mCourseDescription = args.getString(CoursePagerAdapter.COURSE_DESCRIPTION);
-            int sectionNumber = args.getInt(CoursePagerAdapter.ARG_SECTION_NUMBER);
-
-            switch (sectionNumber) {
+            mTopCardResourceId = args.getInt(CoursePagerAdapter.COURSE_CATEGORY);
+            /**int sectionNumber = args.getInt(CoursePagerAdapter.ARG_SECTION_NUMBER);
+             switch (sectionNumber) {
                 case 0:  mTopCardResourceId = R.drawable.angularjs; break;
                 case 1:  mTopCardResourceId = R.drawable.csharp; break;
                 case 2:  mTopCardResourceId = R.drawable.logging; break;
                 case 3:  mTopCardResourceId = R.drawable.nodejs; break;
                 case 4:  mTopCardResourceId = R.drawable.mvc; break;
-            }
+            }*/
             displayValues(rootView, mCourseTitle, mCourseDescription, mTopCardResourceId);
         }
 
@@ -76,13 +77,14 @@ public class CourseFragment extends Fragment {
                 courseActionResourceId =R.string.action_exercises;
                 break;
             default:
-                handled = super.onOptionsItemSelected(item);
+                handled = false;// super.onOptionsItemSelected(item);
                 break;
         }
 
         if(courseActionResourceId!=COURSE_ACTION_NOT_SET){
             showActionActivity(courseActionResourceId);
         }
+        super.onOptionsItemSelected(item);
         return handled;
     }
 

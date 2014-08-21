@@ -32,4 +32,24 @@
     <string name="title_activity_course_actions">CourseActionsActivity</string>
     <string name="title_activity_third_layer">ThirdLayer</string>
 
+
+    <string name="title_sass">Simplifying CSS With Sass</string>
+    <string name="title_sass_short">Sass</string>
+    <string name="desc_sass">Create more maintainable CSS in less time.</string>
+    <string name="title_sql2012_install_and_config">SQL Server 2012: Installation and Configuration</string>
+    <string name="title_sql2012_install_and_config_short">sql2012</string>
+    <string name="desc_sql2012_install_config">Learn how to correctly install and configure SQL Server 2012, including configuration of Windows and storage for stability and performance, and post-installation updates, configuration, and database maintenance. This course is applicable to anyone who is installing SQL Server for the first time and wants to avoid the common mistakes and pitfalls that are made so often.</string>
+    <string name="title_mysql_fundamentals">MySQL Fundamentals</string>
+    <string name="title_mysql_fundamentals_short">MySQL</string>
+    <string name="desc_mysql_fundamentals">Fundamentals of MySQL, an essential part of the LAMP stack.</string>
+    <string name="title_mongodb">Introduction to MongoDB</string>
+    <string name="title_mongodb_short">MongoDB</string>
+    <string name="desc_mongodb">MongoDB is a very popular NoSQL database that is fast and scalable. This course will get you familiar with this unique database and arm you with the essential skills to start using Mongo to power your software application.</string>
+    <string name="title_ef5">Getting Started with Entity Framework 5</string>
+    <string name="title_ef5_short">EntityFramework</string>
+    <string name="desc_ef5">This course provides an introduction to using Entity Framework 5 with Visual Studio 2012</string>
+
+    <string name="open_drawer_message">Open course categories</string>
+    <string name="close_drawer_message">Close course categories</string>
+
 </resources>

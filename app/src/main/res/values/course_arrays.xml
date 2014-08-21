@@ -1,30 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Course Titles -->
-    <string-array name="course_titles">
+    <string-array name="web_course_titles">
         <item>@string/title_angular_get_started</item>
-        <item>@string/title_c_sharp_fundamentals</item>
-        <item>@string/title_modern_structured_logging</item>
-        <item>@string/title_node_application_patterns</item>
         <item>@string/title_mvc5_fundamentals</item>
+        <item>@string/title_sass</item>
     </string-array>
 
     <!-- Course Short Titles -->
-    <string-array name="course_short_titles">
+    <string-array name="web_course_short_titles">
         <item>@string/title_angular_get_started_short</item>
-        <item>@string/title_c_sharp_fundamentals_short</item>
-        <item>@string/title_modern_structured_logging_short</item>
-        <item>@string/title_node_application_patterns_short</item>
         <item>@string/title_mvc5_fundamentals_short</item>
+        <item>@string/title_sass_short</item>
     </string-array>
 
     <!-- Course Descriptions  -->
-    <string-array name="course_description">
+    <string-array name="web_course_description">
         <item>@string/desc_angular_get_started</item>
+        <item>@string/desc_mvc5_fundamentals</item>
+        <item>@string/desc_sass</item>
+    </string-array>
+
+    <!-- Course Titles -->
+    <string-array name="server_course_titles">
+        <item>@string/title_c_sharp_fundamentals</item>
+        <item>@string/title_modern_structured_logging</item>
+        <item>@string/title_node_application_patterns</item>
+    </string-array>
+
+    <!-- Course Short Titles -->
+    <string-array name="server_course_short_titles">
+        <item>@string/title_c_sharp_fundamentals_short</item>
+        <item>@string/title_modern_structured_logging_short</item>
+        <item>@string/title_node_application_patterns_short</item>
+    </string-array>
+
+    <!-- Course Descriptions  -->
+    <string-array name="server_course_description">
         <item>@string/desc_c_sharp_fundamentals</item>
         <item>@string/desc_modern_structured_logging</item>
         <item>@string/desc_node_application_patterns</item>
-        <item>@string/desc_mvc5_fundamentals</item>
+    </string-array>
+
+    <!-- Course Titles -->
+    <string-array name="database_course_titles">
+        <item>@string/title_sql2012_install_and_config</item>
+        <item>@string/title_mysql_fundamentals</item>
+        <item>@string/title_mongodb</item>
+        <item>@string/title_ef5</item>
+    </string-array>
+
+    <!-- Course Short Titles -->
+    <string-array name="database_course_short_titles">
+        <item>@string/title_sql2012_install_and_config_short</item>
+        <item>@string/title_mysql_fundamentals_short</item>
+        <item>@string/title_mongodb_short</item>
+        <item>@string/title_ef5_short</item>
+    </string-array>
+
+    <!-- Course Descriptions  -->
+    <string-array name="database_course_description">
+        <item>@string/desc_sql2012_install_config</item>
+        <item>@string/desc_mysql_fundamentals</item>
+        <item>@string/desc_mongodb</item>
+        <item>@string/desc_ef5</item>
     </string-array>
 
 </resources>
